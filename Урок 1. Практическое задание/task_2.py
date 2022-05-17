@@ -9,3 +9,16 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+
+
+def exercice_2():
+    try:
+        time = int(input('Введите кол-во секунд: '))
+    except ValueError:
+        time = 3600
+
+    result = f"Время в формате ч:м:с - {time/3600:.1f} : {time/60:.1f} : {time}"
+    print(result)
+
+
+exercice_2()

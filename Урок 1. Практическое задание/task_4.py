@@ -10,3 +10,18 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
+
+def exercise_4():
+    numbers = int(input("Введите целое положительное число: "))
+    max_num = 0
+
+    while numbers > 0:
+        if numbers % 10 > max_num:
+            max_num = numbers % 10
+        numbers = numbers // 10
+
+    print(f"Самая большая цифра в числе: {max_num}")
+
+
+exercise_4()

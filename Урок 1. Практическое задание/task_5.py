@@ -18,3 +18,25 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+
+def exercise_5():
+    firm_income = int(input("Введите выручку фирмы: "))
+    firm_lost = int(input("Введите издержки фирмы: "))
+
+    if firm_lost < firm_income:
+        firm_result = firm_income - firm_lost
+        firm_conclusion = f'Фирма прибыльна. Величина выручки: {firm_result}'
+        rentab = f'Рентабельность выручки: {firm_result / firm_income:.1f}'
+
+        print(firm_conclusion)
+        print(rentab)
+
+        workers = int(input("Введите число работников: "))
+        print(f"Прибыль фирмы на одного сотрудника: {firm_result / workers}")
+    else:
+        firm_conclusion = f'Фирма убыточна. Величина убытка: {firm_lost - firm_income:.0f}'
+        print(firm_conclusion)
+
+
+exercise_5()
